@@ -1,8 +1,8 @@
-#  Bilateral Awareness Network
+#  ABCNet: Attentive Bilateral Contextual Network for Efficient Semantic Segmentation of Fine-Resolution Remote Sensing Images
 
-In this repository, we implement the Bilateral Awareness Network which contains a dependency path and a texture path to fully capture the long-range relationships and fine-grained details in very fine resolution (VFR) urban scene images . 
+In this repository, we implement the Attentive Bilateral Contextual Network which contains a spatial path and a contextual path to fully capture the long-range relationships and fine-grained details in fine-resolution remote sensing images. 
 
-The detailed results can be seen in the [Multi-stage Attention ResU-Net for Semantic Segmentation of Fine-Resolution Remote Sensing Images](https://arxiv.org/ftp/arxiv/papers/2106/2106.12413.pdf).
+The detailed results can be seen in the [ABCNet: Attentive Bilateral Contextual Network for Efficient Semantic Segmentation of Fine-Resolution Remote Sensing Images](https://arxiv.org/abs/2102.02531).
 
 The related repositories include:
 * [MACU-Net](https://github.com/lironui/MACU-Net)->A modified version of U-Net.
@@ -11,7 +11,7 @@ The related repositories include:
 
 If our code is helpful to you, please cite:
 
-`Wang, L., Li, R., Wang, D., Duan, C., Wang, T., & Meng, X. (2021). Transformer Meets Convolution: A Bilateral Awareness Net-work for Semantic Segmentation of Very Fine Resolution Ur-ban Scene Images. arXiv preprint arXiv:2106.12413.`
+`Li, Rui, and Chenxi Duan. "ABCNet: Attentive Bilateral Contextual Network for Efficient Semantic Segmentation of Fine-Resolution Remote Sensing Images." arXiv preprint arXiv:2102.02531 (2021).` (will be uodated soon)
 
 Requirements：
 ------- 
@@ -21,20 +21,31 @@ PyTorch >= 1.3.1
 sklearn >= 0.20.4
 tqdm >= 4.46.1
 imageio >= 2.8.0
+timm >= 0.4.5
 ```
 
 Network:
 ------- 
-![network](https://github.com/lironui/MAResU-Net/blob/main/Fig/network.png)  
-Fig. 1.  The structure of (a) the proposed MAResU-Net and (b) the attention block.
+![network](https://github.com/lironui/BANet/blob/main/figure/network.png)  
+Fig. 1.  The overall architecture of ABCNet.
 
 Result:
 ------- 
-The result on the [UAVid dataset](https://uavid.nl/) can seen from [here, where the user name is **AlexWang**](https://competitions.codalab.org/competitions/25224#results).
-![Result](https://github.com/lironui/MAResU-Net/blob/main/Fig/result.png)  
-Fig. 2. Visualization of results on the Vaihingen.
+The result on the [UAVid dataset](https://uavid.nl/) can seen from [here, where the user name is **lironui**](https://competitions.codalab.org/competitions/25224#results):
 
-Complexity:
-------- 
-![Complexity](https://github.com/lironui/MAResU-Net/blob/main/Fig/complexity.png)  
-Fig. 3. The (a) computation requirement and (b) memory requirement of the raw dot-product attention mechanism and the proposed linear attention mechanism under different input sizes. Please notice that the figure is in log scale.
+| Method    | building | tree     | clutter   | road     | vegetation | static car | moving car | human    | mIoU     | 
+|-----------|----------|----------|-----------|----------|------------|------------|------------|----------|----------| 
+| MSD       | 79.8     | 74.5     | 57.0      | 74.0     | 55.9       | 32.1       | 62.9       | **19.7** | 57.0     | 
+| Fast-SCNN | 75.7     | 71.5     | 44.2      | 61.6     | 43.4       | 19.5       | 51.6       | 0.0      | 45.9     | 
+| BiSeNet   | 85.7     | 78.3     | 64.7      | 61.1     | **77.3**   | **63.4**   | 48.6       | 17.5     | 61.5     | 
+| SwiftNet  | 85.3     | 78.2     | 64.1      | 61.5     | 76.4       | 62.1       | 51.1       | 15.7     | 61.1     | 
+| SwiftNet  | 85.3     | 78.2     | 44.1      | 61.4     | 43.4       | 21.0       | 52.6       | 3.6      | 47.0     | 
+| BANet     | **86.4** | **79.9** | **67.4**  | **81.2** | 63.1       | 48.4       | **69.8**   | 13.9     | **63.8** | 
+
+
+![Result](https://github.com/lironui/BANet/blob/main/figure/UAVid%20-%20val.png)  
+Fig. 2. The experimental results on the UAVid validation set. The first column illustrates the input RGB images, the second column depicts the ground reference and the third column shows the predictions of our BANet.
+
+![Result](https://github.com/lironui/BANet/blob/main/figure/UAVid.png)  
+Fig. 3.  The experimental results on the UAVid test set. The first column illustrates the input RGB images, the second column depicts the outputs of MSD and the third column shows the predictions of our BANet. 
+
