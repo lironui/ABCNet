@@ -26,7 +26,7 @@ timm >= 0.4.5
 
 Network:
 ------- 
-![network](https://github.com/lironui/BANet/blob/main/figure/network.png)  
+![network](https://github.com/lironui/ABCNet/blob/main/figure/network.png)  
 Fig. 1.  The overall architecture of ABCNet.
 
 Result:
