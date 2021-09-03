@@ -40,7 +40,7 @@ The result on the [UAVid dataset](https://uavid.nl/) can seen from [here, where 
 | BiSeNet   | 85.7     | 78.3     | 64.7      | 61.1     | **77.3**   | **63.4**   | 48.6       | 17.5     | 61.5     | 
 | SwiftNet  | 85.3     | 78.2     | 64.1      | 61.5     | 76.4       | 62.1       | 51.1       | 15.7     | 61.1     | 
 | SwiftNet  | 85.3     | 78.2     | 44.1      | 61.4     | 43.4       | 21.0       | 52.6       | 3.6      | 47.0     | 
-| BANet     | **86.4** | **79.9** | **67.4**  | **81.2** | 63.1       | 48.4       | **69.8**   | 13.9     | **63.8** | 
+| ABCNet    | **86.4** | **79.9** | **67.4**  | **81.2** | 63.1       | 48.4       | **69.8**   | 13.9     | **63.8** | 
 
 
 ![Result](https://github.com/lironui/BANet/blob/main/figure/UAVid%20-%20val.png)  
