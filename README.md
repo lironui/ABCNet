@@ -11,7 +11,7 @@ The related repositories include:
 
 If our code is helpful to you, please cite:
 
-`Li, Rui, and Chenxi Duan. "ABCNet: Attentive Bilateral Contextual Network for Efficient Semantic Segmentation of Fine-Resolution Remote Sensing Images." arXiv preprint arXiv:2102.02531 (2021).` (will be uodated soon)
+`Li, Rui, and Chenxi Duan. "ABCNet: Attentive Bilateral Contextual Network for Efficient Semantic Segmentation of Fine-Resolution Remote Sensing Images." arXiv preprint arXiv:2102.02531 (2021).` (The paper has been accepted by ISPRS R&RS, the citation form will be updated soon)
 
 Requirements：
 ------- 
