@@ -6,6 +6,7 @@ The detailed results can be seen in the [ABCNet: Attentive Bilateral Contextual 
 
 The related repositories include:
 * [MACU-Net](https://github.com/lironui/MACU-Net)->A modified version of U-Net.
+* [BANet](https://github.com/lironui/BANet)->Transformer-based segmentation network.
 * [MAResU-Net](https://github.com/lironui/MAResU-Net)->A ResNet-based network with attention mechanism.
 * [Multi-Attention-Network](https://github.com/lironui/Multi-Attention-Network)->A network with multi kernel attention mechanism.
 
