@@ -44,9 +44,6 @@ The result on the [UAVid dataset](https://uavid.nl/) can seen from [here, where 
 | ABCNet    | **86.4** | **79.9** | **67.4**  | **81.2** | 63.1       | 48.4       | **69.8**   | 13.9     | **63.8** | 
 
 
-![Result](https://github.com/lironui/BANet/blob/main/figure/UAVid%20-%20val.png)  
-Fig. 2. The experimental results on the UAVid validation set. The first column illustrates the input RGB images, the second column depicts the ground reference and the third column shows the predictions of our BANet.
-
-![Result](https://github.com/lironui/BANet/blob/main/figure/UAVid.png)  
-Fig. 3.  The experimental results on the UAVid test set. The first column illustrates the input RGB images, the second column depicts the outputs of MSD and the third column shows the predictions of our BANet. 
+![Result](https://github.com/lironui/ABCNet/blob/main/figure/UAVid.png)  
+Fig. 2.  The experimental results on the UAVid test set. The first column illustrates the input RGB images, the second column depicts the outputs of MSD and the third column shows the predictions of our BANet. 
 
