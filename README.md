@@ -14,17 +14,6 @@ If our code is helpful to you, please cite:
 
 `Li, Rui, and Chenxi Duan. "ABCNet: Attentive Bilateral Contextual Network for Efficient Semantic Segmentation of Fine-Resolution Remote Sensing Images." arXiv preprint arXiv:2102.02531 (2021).` (The paper has been accepted by ISPRS R&RS, the citation form will be updated soon)
 
-Requirements：
-------- 
-```
-numpy >= 1.16.5
-PyTorch >= 1.3.1
-sklearn >= 0.20.4
-tqdm >= 4.46.1
-imageio >= 2.8.0
-timm >= 0.4.5
-```
-
 Network:
 ------- 
 ![network](https://github.com/lironui/ABCNet/blob/main/figure/network.png)  
