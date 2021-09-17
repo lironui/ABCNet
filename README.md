@@ -14,7 +14,7 @@ The related repositories include:
 
 If our code is helpful to you, please cite:
 
-`Li, R., Zheng, S., Zhang, C., Duan, C., Wang, L., Atkinson, P.M., 2021. ABCNet: Attentive bilateral contextual network for efficient semantic segmentation of Fine-Resolution remotely sensed imagery. ISPRS Journal of Photogrammetry and Remote Sensing 181, 84-98.`
+`R. Li, S. Zheng, C. Zhang, C. Duan, L. Wang, and P. M. Atkinson, "ABCNet: Attentive bilateral contextual network for efficient semantic segmentation of Fine-Resolution remotely sensed imagery," ISPRS Journal of Photogrammetry and Remote Sensing, vol. 181, pp. 84-98, 2021/11/01/ 2021, doi: https://doi.org/10.1016/j.isprsjprs.2021.09.005.`
 
 Network:
 ------- 
