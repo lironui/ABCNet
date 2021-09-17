@@ -23,7 +23,7 @@ Fig. 1.  The overall architecture of ABCNet.
 
 Result:
 ------- 
-The result on the [UAVid dataset](https://uavid.nl/) can seen from [here, where the user name is **lironui**](https://competitions.codalab.org/competitions/25224#results) and can be downloaded by this [link](https://competitions.codalab.org/my/competition/submission/904615/input.zip):
+The result on the [UAVid dataset](https://uavid.nl/) can seen from [here, where the user name is **lironui**](https://competitions.codalab.org/competitions/25224#results) and can be downloaded by [**this link**](https://competitions.codalab.org/my/competition/submission/904615/input.zip):
 
 | Method    | building | tree     | clutter   | road     | vegetation | static car | moving car | human    | mIoU     | 
 |-----------|----------|----------|-----------|----------|------------|------------|------------|----------|----------| 
