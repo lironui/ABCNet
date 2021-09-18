@@ -4,7 +4,7 @@
 
 In this repository, we implement the Attentive Bilateral Contextual Network which contains a spatial path and a contextual path to fully capture the long-range relationships and fine-grained details in fine-resolution remote sensing images. 
 
-The detailed results can be seen in the [ABCNet: Attentive Bilateral Contextual Network for Efficient Semantic Segmentation of Fine-Resolution Remote Sensing Images](https://arxiv.org/abs/2102.02531).
+The detailed results can be seen in the [ABCNet: Attentive Bilateral Contextual Network for Efficient Semantic Segmentation of Fine-Resolution Remote Sensing Images](https://www.sciencedirect.com/science/article/pii/S0924271621002379).
 
 The related repositories include:
 * [MACU-Net](https://github.com/lironui/MACU-Net)->A modified version of U-Net.
