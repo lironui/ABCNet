@@ -23,7 +23,7 @@ Fig. 1.  The overall architecture of ABCNet.
 
 Result:
 ------- 
-The result on the [UAVid dataset](https://uavid.nl/) can seen from [here, where the user name is **lironui**](https://competitions.codalab.org/competitions/25224#results) and can be downloaded by [**this link**](https://competitions.codalab.org/my/competition/submission/904615/input.zip):
+The result on the [UAVid dataset](https://uavid.nl/) can seen from [here, where the user name is **lironui**](https://competitions.codalab.org/competitions/25224#results) or [here](https://competitions.codalab.org/competitions/public_submissions/25224) and can be downloaded by [**this link**](https://competitions.codalab.org/my/competition/submission/904615/input.zip):
 
 | Method    | building | tree     | clutter   | road     | vegetation | static car | moving car | human    | mIoU     | 
 |-----------|----------|----------|-----------|----------|------------|------------|------------|----------|----------| 
@@ -36,5 +36,5 @@ The result on the [UAVid dataset](https://uavid.nl/) can seen from [here, where 
 
 
 ![Result](https://github.com/lironui/ABCNet/blob/main/figure/UAVid.png)  
-Fig. 2.  The experimental results on the UAVid test set. The first column illustrates the input RGB images, the second column depicts the outputs of MSD and the third column shows the predictions of our BANet. 
+Fig. 2.  The experimental results on the UAVid test set. The first column illustrates the input RGB images, the second column depicts the outputs of MSD and the third column shows the predictions of our ABCNet. 
 
