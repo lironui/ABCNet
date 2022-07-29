@@ -6,6 +6,8 @@ In this repository, we implement the Attentive Bilateral Contextual Network whic
 
 The detailed results can be seen in the [ABCNet: Attentive Bilateral Contextual Network for Efficient Semantic Segmentation of Fine-Resolution Remote Sensing Images](https://www.sciencedirect.com/science/article/pii/S0924271621002379).
 
+The training and testing code can refer to [GeoSeg](https://github.com/WangLibo1995/GeoSeg).
+
 The related repositories include:
 * [MACU-Net](https://github.com/lironui/MACU-Net)->A modified version of U-Net.
 * [BANet](https://github.com/lironui/BANet)->A Transformer-based segmentation network.
