@@ -178,7 +178,7 @@ class ContextPath(nn.Module):
         self.init_weight()
 
     def forward(self, x):
-        feat8, feat16, feat32 = self.resnet(x)
+        feat16, feat32 = self.resnet(x)
 
         avg = torch.mean(feat32, dim=(2, 3), keepdim=True)
         avg = self.conv_avg(avg)
@@ -193,7 +193,7 @@ class ContextPath(nn.Module):
         feat16_up = self.up16(feat16_sum)
         feat16_up = self.conv_head16(feat16_up)
 
-        return feat16_up, self.up16(feat16), self.up32(feat32)  # x8, x16
+        return feat16_up, feat32_up  # x8, x16
 
     def init_weight(self):
         for ly in self.children():
@@ -212,7 +212,6 @@ class ContextPath(nn.Module):
             elif isinstance(module, nn.modules.batchnorm._BatchNorm):
                 nowd_params += list(module.parameters())
         return wd_params, nowd_params
-
 
 class SpatialPath(nn.Module):
     def __init__(self, *args, **kwargs):
@@ -297,14 +296,14 @@ class ABCNet(nn.Module):
 
     def forward(self, x):
         H, W = x.size()[2:]
-        feat_cp8, feat_cp16, feat_cp32 = self.cp(x)
+        feat_cp8, feat_cp16 = self.cp(x)
         feat_sp = self.sp(x)
         feat_fuse = self.fam(feat_sp, feat_cp8)
 
         feat_out = self.conv_out(feat_fuse)
         if self.training:
-            feat_out16 = self.conv_out16(feat_cp16)
-            feat_out32 = self.conv_out32(feat_cp32)
+            feat_out16 = self.conv_out16(feat_cp8)
+            feat_out32 = self.conv_out32(feat_cp16)
             return feat_out, feat_out16, feat_out32
         # feat_out = feat_out.argmax(dim=1)
         return feat_out
