@@ -178,7 +178,7 @@ class ContextPath(nn.Module):
         self.init_weight()
 
     def forward(self, x):
-        feat16, feat32 = self.resnet(x)
+        feat8, feat16, feat32 = self.resnet(x)
 
         avg = torch.mean(feat32, dim=(2, 3), keepdim=True)
         avg = self.conv_avg(avg)
@@ -290,8 +290,8 @@ class ABCNet(nn.Module):
         self.fam = FeatureAggregationModule(256, 256)
         self.conv_out = Output(256, 256, n_classes, up_factor=8)
         if self.training:
-            self.conv_out16 = Output(256, 64, n_classes, up_factor=8)
-            self.conv_out32 = Output(512, 64, n_classes, up_factor=16)
+            self.conv_out16 = Output(128, 64, n_classes, up_factor=8)
+            self.conv_out32 = Output(128, 64, n_classes, up_factor=16)
         self.init_weight()
 
     def forward(self, x):
@@ -333,6 +333,6 @@ if __name__ == "__main__":
     net.train()
     in_ten = torch.randn(4, 3, 512, 512).cuda()
     out = net(in_ten)
-    print(out.shape)
+    print(out[0].shape)
 
     net.get_params()
